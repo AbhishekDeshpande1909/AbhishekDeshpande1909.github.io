@@ -4,7 +4,7 @@
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="CSS/AboutUs.css">
-<title>CRICSTATZ</title>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <style>
 body {
     margin : 50px 50px 0px 120px;
@@ -16,11 +16,30 @@ p{
     font-size: 20px;
 }
 </style>
+<script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+    
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+    
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      if (n > x.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = x.length}
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      x[slideIndex-1].style.display = "block";  
+    }
+    </script>
 
 </head>
 <body>
   <div style="text-align: left;">
-    <a href="Home.html" >
+    <a href="index.html" >
       <input class="btn" type="button" value="CRICSTATZ">
      </a>
   </div>
@@ -34,10 +53,11 @@ p{
 
   <h1 class="team">Our Team</h1>
 
-<div class="row">
     <div class="column">
-      <div class="card">
-        <img src="Images/abhi1.jpg" alt="Abhishek Deshpande" style="width:68%;">
+      <div class="card">        
+    <img class="mySlides" src="Images/abhi1.jpg" style="width:68%" align="center">
+    <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+    <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
         <div class="container">
           <h2>ABHISHEK DESHPANDE</h2>
           <p class="title">RollNo:03 CDAC JUHU</p>
@@ -49,7 +69,9 @@ p{
   
     <div class="column">
       <div class="card">
-        <img src="Images/akshay.jpeg" alt="Akshay Nemade" style="width:80%">
+    <img class="mySlides" src="Images/akshay.jpeg" style="width:80%">
+    <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+    <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
         <div class="container">
           <h2>AKSHAY NEMADE</h2>
           <p class="title">RollNo:14 CDAC JUHU</p>
@@ -61,7 +83,9 @@ p{
     
     <div class="column">
       <div class="card">
-        <img src="Images/anand.jpeg" alt="Anand Gujja" style="width:85%">
+        <img class="mySlides" src="Images/akshay.jpeg" style="width:80%">
+        <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
         <div class="container">
           <h2>ANAND GUJJA</h2>
           <p class="title">RollNo:16 CDAC JUHU</p>
@@ -70,6 +94,6 @@ p{
         </div>
       </div>
     </div>
-  </div>
+
 </body>
 </html>
